@@ -40,7 +40,6 @@ jobs:
           export ANDROID_TOOLCHAIN=${PWD}/android-toolchain
           export BOOST_ROOT=${PWD}/boost
           sed -i 's/24/21/g' ${ANDROID_TOOLCHAIN}/sysroot/usr/include/ifaddrs.h
-          sed -i 's/24/21/g' ${ANDROID_TOOLCHAIN}/sysroot/usr/include/stdio.h
           sed -i 's/28/21/g' ${ANDROID_TOOLCHAIN}/sysroot/usr/include/sys/random.h
           sed -i 's/RANLIB = ranlib/RANLIB = "${ANDROID_TOOLCHAIN}\/bin\/arm-linux-androideabi-ranlib"/g' ${BOOST_ROOT}/tools/build/src/tools/gcc.jam
       - name: setup openssl
